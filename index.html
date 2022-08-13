@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Online chat</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Firebase chat</h1>
+            <h3>Choose a chat room</h3>
+        </header>
+        
+        <section class="chatrooms">
+            <div class="chatroom-btn active">
+                <p>General</p>
+            </div>
+            <div class="chatroom-btn ">
+                <p>JS</p>
+            </div>
+            <div class="chatroom-btn">
+                <p>Homeworks</p>
+            </div>
+            <div class="chatroom-btn">
+                <p>Tests</p>
+            </div>
+        </section>
+        <section class="messages">
+            <div class="messages-div">
+            <div class="messages-content">
+                <div class="message">
+                    <span class="user-name">Anonimus:</span>
+                    <span class="user-message">teteasd</span>
+                    <p class="date">13.10.2022.</p>
+                </div>
+                <div class="message">
+                    <span class="user-name">Anonimus:</span>
+                    <span class="user-message">teteasd</span>
+                    <p class="date">13.10.2022.</p>
+                </div>
+                <div class="message">
+                    <span class="user-name">Anonimus:</span>
+                    <span class="user-message">teteasd</span>
+                    <p class="date">13.10.2022.</p>
+                </div>
+                <div class="message">
+                    <span class="user-name">Anonimus:</span>
+                    <span class="user-message">teteasd</span>
+                    <p class="date">13.10.2022.</p>
+                </div>
+                <div class="message">
+                    <span class="user-name">Anonimus:</span>
+                    <span class="user-message">teteasd</span>
+                    <p class="date">13.10.2022.</p>
+                </div>
+                <div class="message">
+                    <span class="user-name">Anonimus:</span>
+                    <span class="user-message">teteasd</span>
+                    <p class="date">13.10.2022.</p>
+                </div>
+                <div class="message">
+                    <span class="user-name">Anonimus:</span>
+                    <span class="user-message">teteasd</span>
+                    <p class="date">13.10.2022.</p>
+                </div>
+                <div class="message">
+                    <span class="user-name">Anonimus:</span>
+                    <span class="user-message">teteasd</span>
+                    <p class="date">13.10.2022.</p>
+                </div>
+            </div>
+        </div>
+        </section>
+        <div class="inputs">
+            <div class="message-input-div">
+                <textarea type="text" class="input-message" placeholder="Your message"></textarea>
+                <button class="slanje-button-message">Slanje</button>
+            </div>
+            <div class="username-message-div">
+                <input type="text" placeholder="Username" class="username-message"></input>
+                <button class="slanje-button-username">Slanje</button>
+                </div>
+            </div>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyBQnmp-etvjI3bB02Oszm3oFM26BWNnYLs",
+        authDomain: "chatapp-9f519.firebaseapp.com",
+        projectId: "chatapp-9f519",
+        storageBucket: "chatapp-9f519.appspot.com",
+        messagingSenderId: "102935097957",
+        appId: "1:102935097957:web:f3b6d0c64f9ce6c220cc8c"
+      };
+
+      firebase.initializeApp(firebaseConfig);
+      let db = firebase.firestore();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

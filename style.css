@@ -1,0 +1,200 @@
+body{
+   background-color: rgb(212, 211, 211); 
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main{
+    
+    width: 60%;
+    margin:3rem auto /*3rem gore dole auto levo desno*/
+}
+header{
+    text-align: center;
+    border: 2px solid #dee1e2;
+    margin-bottom: 2rem;
+    background-color: rgb(68, 68, 247);
+    border-radius: 35px 35px;
+    transition: background-color 0.4s ease;
+    cursor: pointer;
+    
+}
+
+header:hover{
+    background-color:#007f4f;
+    border-color: #ccc;
+}
+.chatrooms{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2px;
+    
+}
+
+.chatroom-btn{
+    padding: 5px 15px;
+    margin: 7px;
+    border: 2px solid #dee1e2;
+    width: 100px;
+    background-color: rgb(18, 18, 218);
+    border-radius: 20px 20px;
+    color: whitesmoke;
+    cursor: pointer;
+    text-align: center;
+    user-select:none;
+    transition: background-color 0.4s ease
+  
+}
+.chatroom-btn:hover{
+    background-color:#007f4f;
+    border-color: #ccc;
+}
+
+.chatroom-btn.active{
+text-decoration: double;
+background-color: #9147ff;
+transition: background-color 0.4s ease;
+}
+
+.chatroom-btn.active:hover{
+background-color: #007f4f;
+}
+
+
+
+.messages-content .message{
+    color: #fff;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: rgb(90, 90, 218);
+    border-radius: 4px;
+    user-select: none;
+    cursor: pointer;
+    transition: background-color 0.4s ease
+}
+.message:hover {
+    background-color: #007f4f;;
+ }
+.messages-content{
+    display: flex;
+    flex-direction: column;/*po defaultu je row, column baca elemente 1 ispod drugog*/
+    align-items: flex-start; /*da se align onoliko kolko su siroki elementi*/
+}
+
+.user-name{
+    font-weight: bold;
+}
+
+.inputs{
+    display: flex;
+   flex-direction: column;
+}
+
+
+
+.inputs .message-input-div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.inputs .username-message-div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+
+}
+.messages{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 550px;
+    border: 2px solid #dee1e2;
+    border-radius: 6px;
+    background: whitesmoke;
+}
+
+.messages:hover {
+    border-color: #ccc;
+}
+
+.inputs .input-message{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    width: 220px;
+    height: 120px;
+    background: #dee1e2;
+    font-size: 14px;
+    line-height: 1.5;
+    border: 2px solid #dee1e2;
+    transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
+ }
+
+.input-message:hover{
+    border-color: #ccc;
+}
+.input-message:focus{
+    outline: none !important;
+    border-color: #9147ff;
+    background: #fff;
+}
+
+
+.inputs .username-message{
+width: 180px;   
+margin-bottom: 5px;
+font-size: 14px;
+border-radius: 6px;
+line-height: 1.5;
+padding: 5px 10px;
+transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
+border: 2px solid #dee1e2;
+color: rgb(14, 14, 16);
+background: #dee1e2;
+display: block;
+height: 36px;
+}
+.username-message:hover {
+    border-color: #ccc;
+}
+.username-message:focus{
+    outline: none !important;
+    border-color: #9147ff;
+    background: #fff;
+}
+    
+
+
+.username-message::placeholder{
+    text-align: center;
+}
+
+.inputs button {
+  background-color: #007f4f;
+  border-radius: 8px;
+  border-width: 0;
+  color: whitesmoke;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  list-style: none;
+  padding: 10px 12px;
+  text-align: center;
+  vertical-align: baseline;
+  white-space: nowrap;
+  touch-action: manipulation;
+  transition: background-color 0.4s ease;
+}
+
+.inputs button:hover{
+    background-color:rgb(68, 68, 247);
+}
+
+
+
+
