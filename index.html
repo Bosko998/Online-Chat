@@ -16,73 +16,34 @@
         </header>
         
         <section class="chatrooms">
-            <div class="chatroom-btn active">
+            <div class="chatroom-btn active" data-value="general">
                 <p>General</p>
             </div>
-            <div class="chatroom-btn ">
+            <div class="chatroom-btn" data-value="js">
                 <p>JS</p>
             </div>
-            <div class="chatroom-btn">
+            <div class="chatroom-btn" data-value="homeworks">
                 <p>Homeworks</p>
             </div>
-            <div class="chatroom-btn">
+            <div class="chatroom-btn" data-value="tests">
                 <p>Tests</p>
             </div>
         </section>
         <section class="messages">
             <div class="messages-div">
             <div class="messages-content">
-                <div class="message">
-                    <span class="user-name">Anonimus:</span>
-                    <span class="user-message">teteasd</span>
-                    <p class="date">13.10.2022.</p>
-                </div>
-                <div class="message">
-                    <span class="user-name">Anonimus:</span>
-                    <span class="user-message">teteasd</span>
-                    <p class="date">13.10.2022.</p>
-                </div>
-                <div class="message">
-                    <span class="user-name">Anonimus:</span>
-                    <span class="user-message">teteasd</span>
-                    <p class="date">13.10.2022.</p>
-                </div>
-                <div class="message">
-                    <span class="user-name">Anonimus:</span>
-                    <span class="user-message">teteasd</span>
-                    <p class="date">13.10.2022.</p>
-                </div>
-                <div class="message"> 
-                    <span class="user-name">Anonimus:</span>
-                    <span class="user-message">teteasd</span>
-                    <p class="date">13.10.2022.</p>
-                </div>
-                <div class="message">
-                    <span class="user-name">Anonimus:</span>
-                    <span class="user-message">teteasd</span>
-                    <p class="date">13.10.2022.</p>
-                </div>
-                <div class="message">
-                    <span class="user-name">Anonimus:</span>
-                    <span class="user-message">teteasd</span>
-                    <p class="date">13.10.2022.</p>
-                </div>
-                <div class="message">
-                    <span class="user-name">Anonimus:</span>
-                    <span class="user-message">teteasd</span>
-                    <p class="date">13.10.2022.</p>
-                </div>
+                 
             </div>
         </div>
         </section>
         <div class="inputs">
             <div class="message-input-div">
-                <textarea type="text" class="input-message" placeholder="Your message"></textarea>
-                <button class="slanje-button-message">Slanje</button>
+                <textarea id="messages"type="text" class="input-message" placeholder="Your message"></textarea>
+                <button id="send-msg" class="slanje-button-message">Slanje</button>
             </div>
             <div class="username-message-div">
-                <input type="text" placeholder="Username" class="username-message"></input>
-                <button class="slanje-button-username">Slanje</button>
+                <input id="updated-username"type="text" placeholder="Username" class="username-message"></input>
+                <button id="update-msg" class="slanje-button-username">Slanje</button>
                 </div>
             </div>
     </main>

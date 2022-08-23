@@ -20,26 +20,29 @@ export class Chatroom {
     }
     async addMessage(messages){
         let payload = {
-            mssage: messages,
+            message: messages,
             username: this.username,
             room:this.room, 
-            created_at: new Date()
+            created_At: new Date()
         };
         let response = await this.chats.add(payload);
         return response;
     }
-getChats() {
-    this.unsub = this.chats
+getChats(callback) {
+        this.unsub = this.chats
       .where("room", "==", this.room)
-      .orderBy("created_at")
-      .onSnapshot((snapshot) => {
+      .orderBy("created_At")
+        .onSnapshot((snapshot) => {
         snapshot.docChanges().forEach((change) => {
-          console.log(change.doc.data());
+            const messageData = change.doc.data();
+            callback(messageData)
+            
         });
       });
     }
 updateUn(un) {
-        this.username = un
+    this.username = un
+    alert("Username is updated")
     };
 
     updateRoom(r) {
