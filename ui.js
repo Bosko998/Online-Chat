@@ -11,7 +11,6 @@ export class UI {
     }
     clear() {
         this.list.innerHTML = ""
-        console.log("nesto")
     }
     formatData(date) {
         const d = date.getDate();
