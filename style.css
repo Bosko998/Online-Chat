@@ -195,9 +195,9 @@ height: 36px;
     background-color:rgb(68, 68, 247);
 }
 
-@media only screen and (max-width:1000px){
+@media only screen and (min-width:509px) and (max-width:750px){
     main{
-        width: 60%;
+        width:60%;
        
     }
     .chatrooms{
@@ -208,6 +208,16 @@ height: 36px;
 @media only screen and (min-width: 735px) and (max-width:967px){
     .chatrooms {
             flex-wrap:nowrap;
+        }
+}
+
+@media only screen and (min-width: 200px) and (max-width:508px) {
+    main {
+            width: 90%;
+    
+        }
+        .chatrooms {
+                    flex-wrap: wrap;
         }
 }
 
