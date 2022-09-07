@@ -5,7 +5,7 @@ body{
 
 main{
     
-    width: 40%;
+    width: 60%;
     margin:3rem auto /*3rem gore dole auto levo desno*/
 }
 header{
@@ -195,6 +195,21 @@ height: 36px;
     background-color:rgb(68, 68, 247);
 }
 
+@media only screen and (max-width:1000px){
+    main{
+        width: 60%;
+       
+    }
+    .chatrooms{
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (min-width: 735px) and (max-width:967px){
+    .chatrooms {
+            flex-wrap:nowrap;
+        }
+}
 
 
 
