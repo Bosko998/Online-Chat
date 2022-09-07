@@ -32,6 +32,6 @@ export class UI {
                         <span class="user-message">${message}</span>
                         <p class="date">${formatedDate}</p>
                         </div>`
-        this.list.innerHTML =this.list.innerHTML +  html
+        this.list.innerHTML = this.list.innerHTML + html
     }
 }
