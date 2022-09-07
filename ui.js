@@ -19,7 +19,7 @@ export class UI {
         const h = date.getHours();
         const min = date.getMinutes();
 
-        const dateString = d + ":" + m + ":" + y + "/" + h + ":" + m;
+        const dateString = d + "/" + m + "/" + y + "-" + h + ":" + min;
         
         return dateString;
     }
