@@ -4,6 +4,7 @@ export class Chatroom {
         this.username = u;
         this.chats = db.collection("chats");
         this.unsub;
+        this.delete;
     }
     set room(r){
         this._room = r
@@ -33,16 +34,21 @@ getChats(callback) {
       .where("room", "==", this.room)
       .orderBy("created_At")
         .onSnapshot((snapshot) => {
-        snapshot.docChanges().forEach((change) => {
+            snapshot.docChanges().forEach((change) => {
+            const changeType = change.type;
             const messageData = change.doc.data();
-            callback(messageData)
+            messageData.id = change.doc.id
+            callback(messageData,changeType)
             
         });
       });
     }
-updateUn(un) {
+    updateUn(un, notAlert) {
+        console.log(notAlert)
+        if (!notAlert) {
+        alert("Username is updated")
+    }
     this.username = un
-    alert("Username is updated")
     };
 
     updateRoom(r) {
@@ -51,4 +57,5 @@ updateUn(un) {
         this.unsub()
     }
     };
+ 
 }

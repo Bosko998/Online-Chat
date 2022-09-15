@@ -59,9 +59,16 @@ transition: background-color 0.4s ease;
 background-color: #007f4f;
 }
 
+.div-wrapper span{
+    padding: 5px 5px 5px 5px;
+    line-height: 25px;
+}
 
-
+.messages-content .currentEl:hover{
+    background-color:rgb(102, 4, 4) !important;
+}
 .messages-content .message{
+    max-width: 200px;
     color: #fff;
     padding: 1rem;
     margin: 1rem;
@@ -69,15 +76,19 @@ background-color: #007f4f;
     border-radius: 4px;
     user-select: none;
     cursor: pointer;
-    transition: background-color 0.4s ease
+    transition: background-color 0.4s ease;
+    
 }
+
 .message:hover {
     background-color: #007f4f;;
  }
 .messages-content{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;/*po defaultu je row, column baca elemente 1 ispod drugog*/
     align-items: flex-start; /*da se align onoliko kolko su siroki elementi*/
+   
 }
 
 .user-name{
@@ -108,6 +119,8 @@ background-color: #007f4f;
     
 
 }
+
+
 .messages{
     overflow-y: scroll;
     overflow-x: hidden;
@@ -190,12 +203,34 @@ height: 36px;
   touch-action: manipulation;
   transition: background-color 0.4s ease;
 }
+.image{
+    position: relative;
+    right: 10px;
+    top: 10px;
+    font-size: 15px;
+    font-family: sans-serif;
+    cursor: default;
+
+    }
+    .image:hover{
+       color:black
+    }
+
+   
+
+  .thirdButton:hover{
+background-color: rgb(102, 4, 4);
+  }
+  .forthButton:hover {
+      background-color: rgb(102, 4, 4);
+  }
+    
 
 .inputs button:hover{
     background-color:rgb(68, 68, 247);
 }
 
-@media only screen and (min-width:509px) and (max-width:750px){
+@media only screen and (min-width:510px) and (max-width:750px){
     main{
         width:60%;
        
@@ -211,7 +246,7 @@ height: 36px;
         }
 }
 
-@media only screen and (min-width: 200px) and (max-width:508px) {
+@media only screen and (min-width: 200px) and (max-width:509px) {
     main {
             width: 90%;
     
