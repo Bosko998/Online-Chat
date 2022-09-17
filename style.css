@@ -68,6 +68,7 @@ background-color: #007f4f;
     background-color:rgb(102, 4, 4) !important;
 }
 .messages-content .message{
+    position: relative;
     max-width: 200px;
     color: #fff;
     padding: 1rem;
@@ -204,9 +205,9 @@ height: 36px;
   transition: background-color 0.4s ease;
 }
 .image{
-    position: relative;
-    right: 10px;
-    top: 10px;
+    position: absolute;
+    right: 5px;
+    top: 0px;
     font-size: 15px;
     font-family: sans-serif;
     cursor: default;
@@ -246,7 +247,7 @@ background-color: rgb(102, 4, 4);
         }
 }
 
-@media only screen and (min-width: 200px) and (max-width:509px) {
+@media only screen and (min-width: 346px) and (max-width:509px) {
     main {
             width: 90%;
     
@@ -254,6 +255,15 @@ background-color: rgb(102, 4, 4);
         .chatrooms {
                     flex-wrap: wrap;
         }
+}
+@media only screen and (min-width:1px) and (max-width:347px){
+    main {
+    width: 100%;
+    }
+    .chatrooms {
+            flex-wrap: wrap;
+    }
+   
 }
 
 
