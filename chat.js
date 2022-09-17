@@ -44,7 +44,6 @@ getChats(callback) {
       });
     }
     updateUn(un, notAlert) {
-        console.log(notAlert)
         if (!notAlert) {
         alert("Username is updated")
     }
