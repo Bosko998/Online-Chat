@@ -67,5 +67,5 @@ chatRoomButtons.forEach((button) => {
 })
 
 
-// na svaki chat buble dodaj x dugme za  brisanje poruke iz baze
+
 
