@@ -271,7 +271,7 @@ background-color: #007f4f;
    
 }
 .counter {
-    display: block;
+    display: none; 
     position:absolute;
     right:5px;
     bottom: 5px;
