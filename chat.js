@@ -35,11 +35,15 @@ getChats(callback) {
       .orderBy("created_At")
         .onSnapshot((snapshot) => {
             snapshot.docChanges().forEach((change) => {
-            const changeType = change.type;
+                const changeType = change.type;
             const messageData = change.doc.data();
-            messageData.id = change.doc.id
+                messageData.id = change.doc.id
             callback(messageData,changeType)
-            
+            //     if (initialLoad,callback2) {
+                
+
+            //         callback2(initialLoad)
+            // }
         });
       });
     }
@@ -53,7 +57,7 @@ getChats(callback) {
     updateRoom(r) {
         this.room = r
         if(this.unsub) {
-        this.unsub()
+            this.unsub()
     }
     };
  

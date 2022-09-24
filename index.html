@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="style.css">
     <title>Online chat</title>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
 </head>
 <body>
+    <div class="loader"></div>
     <main>
+        
         <header>
             <div class="header-div">
             <h1>Firebase chat</h1>
@@ -20,15 +23,19 @@
         <section class="chatrooms">
             <div class="chatroom-btn active" data-value="general">
                 <p>General</p>
+                <p class="counter">0</p>
             </div>
             <div class="chatroom-btn" data-value="js">
                 <p>JS</p>
+                <p class="counter">0</p>
             </div>
             <div class="chatroom-btn thirdButton" data-value="homeworks">
                 <p>Homeworks</p>
+                <p class="counter">0</p>
             </div>
             <div class="chatroom-btn forthButton"data-value="tests">
                 <p>Tests</p>
+                <p class="counter">0</p>
             </div>
         </section>
         <section class="messages">
