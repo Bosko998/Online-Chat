@@ -1,5 +1,5 @@
 body{
-   background-color: rgb(212, 211, 211); 
+    background-color: rgb(212, 211, 211); 
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -164,18 +164,18 @@ background-color: #007f4f;
 
 
 .inputs .username-message{
-width: 180px;   
-margin-bottom: 5px;
-font-size: 14px;
-border-radius: 6px;
-line-height: 1.5;
-padding: 5px 10px;
-transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
-border: 2px solid #dee1e2;
-color: rgb(14, 14, 16);
-background: #dee1e2;
-display: block;
-height: 36px;
+    width: 180px;   
+    margin-bottom: 5px;
+    font-size: 14px;
+    border-radius: 6px;
+    line-height: 1.5;
+    padding: 5px 10px;
+    transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
+    border: 2px solid #dee1e2;
+    color: rgb(14, 14, 16);
+    background: #dee1e2;
+    display: block;
+    height: 36px;
 }
 .username-message:hover {
     border-color: #ccc;
@@ -193,21 +193,21 @@ height: 36px;
 }
 
 .inputs button {
-  background-color: #007f4f;
-  border-radius: 8px;
-  border-width: 0;
-  color: whitesmoke;
-  cursor: pointer;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 14px;
-  line-height: 20px;
-  list-style: none;
-  padding: 10px 12px;
-  text-align: center;
-  vertical-align: baseline;
-  white-space: nowrap;
-  touch-action: manipulation;
-  transition: background-color 0.4s ease;
+    background-color: #007f4f;
+    border-radius: 8px;
+    border-width: 0;
+    color: whitesmoke;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    list-style: none;
+    padding: 10px 12px;
+    text-align: center;
+    vertical-align: baseline;
+    white-space: nowrap;
+    touch-action: manipulation;
+    transition: background-color 0.4s ease;
 }
 .image{
     position: absolute;
@@ -219,16 +219,16 @@ height: 36px;
 
     }
     .image:hover{
-       color:black
+    color:black
     }
 
    
 
   .thirdButton:hover{
-background-color: #007f4f;
+    background-color: #007f4f;
   }
   .forthButton:hover {
-      background-color: #007f4f;
+    background-color: #007f4f;
   }
     
 
@@ -238,35 +238,38 @@ background-color: #007f4f;
 
 @media only screen and (min-width:510px) and (max-width:750px){
     main{
-        width:60%;
+    width:60%;
        
     }
     .chatrooms{
-        flex-wrap: wrap;
+    flex-wrap: wrap;
+
     }
 }
 
 @media only screen and (min-width: 735px) and (max-width:967px){
     .chatrooms {
-            flex-wrap:nowrap;
+        flex-wrap:nowrap;
+
         }
 }
 
 @media only screen and (min-width: 346px) and (max-width:509px) {
     main {
-            width: 90%;
+        width: 90%;
     
         }
         .chatrooms {
-                    flex-wrap: wrap;
+        flex-wrap: wrap;
+
         }
 }
 @media only screen and (min-width:1px) and (max-width:347px){
     main {
-    width: 100%;
+        width: 100%;
     }
     .chatrooms {
-            flex-wrap: wrap;
+        flex-wrap: wrap;
     }
    
 }
@@ -310,10 +313,10 @@ background-color: #007f4f;
 
 @keyframes loading{
     from{
-        transform: rotate(0turn);;
+    transform: rotate(0turn);;
     }
     to{
-        transform: rotate(1turn);
+    transform: rotate(1turn);
     }
 }
 

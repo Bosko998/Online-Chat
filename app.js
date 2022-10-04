@@ -2,7 +2,6 @@ import {Chatroom} from "./chat.js";
 import { UI } from "./ui.js"
 let selectedChatroom = new Chatroom("general", "Bosko")
 let listHTML = document.querySelector(".messages-content")
-let AllMessages = document.querySelector(".messages")
 let chatRoomUI = new UI(listHTML);
 let sendMessageBtn = document.querySelector("#send-msg");
 let changeUsernameBtn = document.querySelector("#update-msg");
