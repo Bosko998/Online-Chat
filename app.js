@@ -1,42 +1,21 @@
 import {Chatroom} from "./chat.js";
 import { UI } from "./ui.js"
 let selectedChatroom = new Chatroom("general", "Bosko")
-let currentRoom = localStorage.getItem("Room:")
 let listHTML = document.querySelector(".messages-content")
-let messages = document.querySelector(".messages")
+let AllMessages = document.querySelector(".messages")
 let chatRoomUI = new UI(listHTML);
 let sendMessageBtn = document.querySelector("#send-msg");
 let changeUsernameBtn = document.querySelector("#update-msg");
 let chatRoomButtons = document.querySelectorAll(".chatroom-btn");
-let loader = document.querySelector(".loader")
-let LoadingSpinner = () => {
-    setTimeout(() => {
-        messages.scrollTo(5,messages.scrollHeight);  
-        loader.classList.add("loader-hidden");
-        
-     },1000); 
-}
-
-let messageCounter = () => {
-     chatRoomButtons.forEach((btn) => {
-                if (btn.classList.contains("active")) {
-                    let counter = btn.querySelector(".counter")
-                    let counterValue = Number(counter.innerText);
-                    counter.innerText = counterValue + 1
-                } 
-               
-            })
-}
-
 selectedChatroom.getChats((messageData, changeType) => chatRoomUI.templateUI(messageData, changeType))
 
     let soba = localStorage.getItem("Room:")
     let username = localStorage.getItem("Name:")
     let sendMessage = async () => {
+      
     let message = document.querySelector("#messages");
         selectedChatroom.addMessage(message.value)
-            .then(() => {
-            messageCounter()    
+            .then(() => {   
                 console.log("Message sent sucsesfully")
             })
       
@@ -51,14 +30,20 @@ let updateUsername = async (notAlert) => {
 }
 
 let changeChatRoom = (value) => {
-    loader.classList.remove("loader-hidden");
-    LoadingSpinner();
+    let counterDiv = document.querySelector("#counter");
+    let oldCounterDiv = document.getElementById("counter");
+        if (oldCounterDiv) {  
+        oldCounterDiv.remove();
+        
+    }
     selectedChatroom.updateRoom(value);
     chatRoomButtons.forEach((button) => {
+       
         button.classList.remove("active");
         let buttonvalue = button.getAttribute("data-value");
         if (value === buttonvalue) {
-            
+            button.appendChild(counterDiv)
+            counterDiv.innerHTML = 0;
             button.classList.add("active");    
             localStorage.setItem("Room:", buttonvalue)
             
@@ -82,7 +67,6 @@ if (username) {
 
 }
 
-window.addEventListener("load",LoadingSpinner)
 sendMessageBtn.addEventListener("click", sendMessage);
 changeUsernameBtn.addEventListener("click", () => updateUsername(false));
 chatRoomButtons.forEach((button) => {
@@ -91,7 +75,6 @@ chatRoomButtons.forEach((button) => {
     button.addEventListener("click", () =>changeChatRoom(buttonvalue));
    
 })
-
 
 
 

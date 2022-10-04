@@ -270,8 +270,8 @@ background-color: #007f4f;
     }
    
 }
-.counter {
-    display: none; 
+#counter {
+    display: block; 
     position:absolute;
     right:5px;
     bottom: 5px;

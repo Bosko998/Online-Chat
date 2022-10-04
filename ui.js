@@ -53,9 +53,10 @@ export class UI {
             containerWrapper.append(date)
             user_name.innerHTML = username
             user_message.innerHTML = message
-            const formatedDate = this.formatData(created_At.toDate());//toDate zbog timestamp da ga prebacimo kao date obj
+            const formatedDate = this.formatData(created_At.toDate());//toDate because of timestamp, to convert it like date object 
             date.innerHTML = formatedDate;
             let currentUser = localStorage.getItem("Name:")
+             
             if (currentUser === username) {
                 const deleteItem = document.createElement("div")
                 deleteItem.classList.add("image")
@@ -67,7 +68,10 @@ export class UI {
                 messageContainer.style.alignSelf = "flex-end"
                 containerWrapper.append(deleteItem)
                 deleteItem.addEventListener("click", this.deleteMsg) 
-            } 
+            }
+            else {
+        //  messageCounter()
+            }
           this.list.append(messageContainer)
         // const html = `<div class="message">
         //                 <div class="div-wrapper">
@@ -79,6 +83,7 @@ export class UI {
         //                 </div>`
 
         }
+       
     }
     deleteMsg(elem) {
         let elemAttribute =elem.target.parentElement.parentElement.getAttribute("data-id")
@@ -88,4 +93,6 @@ export class UI {
             .delete()
             .then(() => { console.log("succesfully!") }) 
     }
+    
+
 }
