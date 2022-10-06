@@ -99,6 +99,7 @@ background-color: #007f4f;
 
 .inputs{
     display: flex;
+    position: relative;
    flex-direction: column;
 }
 
@@ -236,6 +237,14 @@ background-color: #007f4f;
     background-color:rgb(68, 68, 247);
 }
 
+/* #scrollButton{
+    position: absolute;
+    right: -40px;
+    top: -50px;
+    border: 1px solid black;
+    padding: 10px 10px 10px;
+} */
+
 @media only screen and (min-width:510px) and (max-width:750px){
     main{
     width:60%;
@@ -321,4 +330,73 @@ background-color: #007f4f;
 }
 
 
+.center-con{
+    position: absolute;
+    right: -60px;
+    top:-60px;
+}
+.round {
+    position: relative;
+    border: 3px solid #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.round span {
+    z-index: 999;
+    height: 3px;
+    margin: 1px;
+    width: 20px;
+    background: #fff;
+    transition: 0.4s ease;
+}
+
+.round span:first-child {
+    display: block;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 15%;
+    bottom: 25%;
+}
+
+.round span:nth-child(2) {
+    display: block;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 40%;
+    bottom: 25%;
+}
+
+.round span:nth-child(3) {
+    display: block;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 15%;
+    bottom: 54%;
+}
+
+.round span:nth-child(4) {
+    display: block;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 40%;
+    bottom: 54%;
+}
+
+.round:hover span:nth-child(1) {
+    transform: rotate(-135deg);
+}
+
+.round:hover span:nth-child(2) {
+    transform: rotate(135deg);
+}
+
+.round:hover span:nth-child(3) {
+    transform: rotate(225deg);
+}
+
+.round:hover span:nth-child(4) {
+    transform: rotate(-225deg);
+}
 

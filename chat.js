@@ -55,6 +55,7 @@ export class Chatroom {
    
                 let AllMessages = document.querySelector(".messages");
                 let counterDiv = document.querySelector("#counter");
+                let center_con;
                 console.log(counterDiv)
                 
                 this.LoadingScreen(AllMessages);
@@ -67,8 +68,9 @@ export class Chatroom {
                     clientScrollHeight = AllMessages.scrollTop
                     scrollHeight = AllMessages.scrollHeight -550
                     if (scrollHeight === clientScrollHeight) {
-                        
+                        console.log(scrollHeight, clientScrollHeight)
                         counterDiv.innerHTML = 0
+                        
                 }
                    
                 })  
@@ -77,6 +79,35 @@ export class Chatroom {
                         numberOfMessages++
                     counterDiv.innerHTML = numberOfMessages
                     AllMessages.scrollTo(0, clientScrollHeight);
+                    center_con = document.createElement("div");
+                    let round = document.createElement("div");
+                    let span = document.createElement("span");
+                    let span1 = document.createElement("span");
+                    let span2 = document.createElement("span");
+                    let span3 = document.createElement("span");
+                    center_con.setAttribute("class", "center-con");
+                    round.setAttribute("class", "round");
+                    round.addEventListener("click", () => {
+                        AllMessages.scrollTo(5, AllMessages.scrollHeight)
+                        center_con.style.display = "none"
+                    })
+                    if (center_con) {
+                    document.querySelector(".inputs").appendChild(center_con)
+                    center_con.appendChild(round);
+                    round.appendChild(span)
+                    round.appendChild(span1)
+                    round.appendChild(span2)
+                    round.appendChild(span3)
+                    // round.appendChild(counterDiv)
+                    
+                    } else {
+                   
+                        center_con.innerHTML = numberOfMessages
+                    }
+                    
+                    
+                    // scrollButton.innerHTML = numberOfMessages
+                    // console.log(scrollButton)
                 } else{
                     counterDiv.innerHTML = 0
                     // AllMessages.scrollTo(5, AllMessages.scrollHeight);
