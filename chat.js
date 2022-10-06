@@ -61,57 +61,49 @@ export class Chatroom {
                 this.LoadingScreen(AllMessages);
                 if (messageData) {
 
-                loaclId = localStorage.getItem("id:")
-                userName = localStorage.getItem("Name:")
+                    loaclId = localStorage.getItem("id:")
+                    userName = localStorage.getItem("Name:")
         
                 AllMessages.addEventListener("scroll", () => {
                     clientScrollHeight = AllMessages.scrollTop
                     scrollHeight = AllMessages.scrollHeight -550
-                    if (scrollHeight === clientScrollHeight) {
-                        console.log(scrollHeight, clientScrollHeight)
-                        counterDiv.innerHTML = 0
+                if (scrollHeight === clientScrollHeight) {
+                    center_con.style.display = "none"
+                    counterDiv.innerHTML = 0
                         
                 }
                    
                 })  
                 if (clientScrollHeight < scrollHeight - 100 && messageData.id === loaclId && messageData.username !== userName) {
-                    let numberOfMessages = Number(counterDiv.innerHTML)
+                        center_con = document.createElement("div");
+                        let round = document.createElement("div");
+                        let span = document.createElement("span");
+                        let span1 = document.createElement("span");
+                        let span2 = document.createElement("span");
+                        let span3 = document.createElement("span");
+                        center_con.setAttribute("class", "center-con");
+                        round.setAttribute("class", "round");
+                        let numberOfMessages = Number(counterDiv.innerHTML)
                         numberOfMessages++
-                    counterDiv.innerHTML = numberOfMessages
-                    AllMessages.scrollTo(0, clientScrollHeight);
-                    center_con = document.createElement("div");
-                    let round = document.createElement("div");
-                    let span = document.createElement("span");
-                    let span1 = document.createElement("span");
-                    let span2 = document.createElement("span");
-                    let span3 = document.createElement("span");
-                    center_con.setAttribute("class", "center-con");
-                    round.setAttribute("class", "round");
+                        counterDiv.innerHTML = numberOfMessages
+                        AllMessages.scrollTo(0, clientScrollHeight);
+                    
                     round.addEventListener("click", () => {
                         AllMessages.scrollTo(5, AllMessages.scrollHeight)
                         center_con.style.display = "none"
                     })
-                    if (center_con) {
-                    document.querySelector(".inputs").appendChild(center_con)
-                    center_con.appendChild(round);
-                    round.appendChild(span)
-                    round.appendChild(span1)
-                    round.appendChild(span2)
-                    round.appendChild(span3)
-                    // round.appendChild(counterDiv)
-                    
-                    } else {
-                   
-                        center_con.innerHTML = numberOfMessages
+                    console.log(counterDiv.innerHTML)
+                    if (numberOfMessages == 1) {
+                        
+                        document.querySelector(".inputs").appendChild(center_con)
+                        center_con.appendChild(round);
+                        round.appendChild(span)
+                        round.appendChild(span1)
+                        round.appendChild(span2)
+                        round.appendChild(span3)
                     }
                     
-                    
-                    // scrollButton.innerHTML = numberOfMessages
-                    // console.log(scrollButton)
-                } else{
-                    counterDiv.innerHTML = 0
-                    // AllMessages.scrollTo(5, AllMessages.scrollHeight);
-                }
+                } 
                  
                 }
       });
