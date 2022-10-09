@@ -67,10 +67,9 @@ export class Chatroom {
                 AllMessages.addEventListener("scroll", () => {
                     clientScrollHeight = AllMessages.scrollTop
                     scrollHeight = AllMessages.scrollHeight -550
-                if (scrollHeight === clientScrollHeight) {
+                if (scrollHeight === clientScrollHeight && center_con) {
                     center_con.style.display = "none"
                     counterDiv.innerHTML = 0
-                        
                 }
                    
                 })  
@@ -92,7 +91,7 @@ export class Chatroom {
                         AllMessages.scrollTo(5, AllMessages.scrollHeight)
                         center_con.style.display = "none"
                     })
-                    console.log(counterDiv.innerHTML)
+                  
                     if (numberOfMessages == 1) {
                         
                         document.querySelector(".inputs").appendChild(center_con)
